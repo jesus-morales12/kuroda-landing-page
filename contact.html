@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Contact Us</title>
+    <script src="freecontactformvalidation.js"></script>
+    <script>
+        required.add('Full_Name', 'NOT_EMPTY', 'Full Name');
+        required.add('Email_Address', 'EMAIL', 'Email Address');
+        required.add('Your_Message', 'NOT_EMPTY', 'Your Message');
+        required.add('AntiSpam', 'NOT_EMPTY', 'Anti-Spam Question');
+    </script>
+
+</head>
+<body>
+    <form name="freecontactform" method="post" action="freecontactformprocess.php" onsubmit="return validate.check(this)">
+        <table width="400px" class="freecontactform">
+            <tr>
+                <td colspan="2">
+
+                    <div class="freecontactformheader">Contact Us Form</div>
+
+                    <div class="freecontactformmessage">Fields marked with
+                        <span class="required_star"> * </span> are mandatory.</div>
+
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <label for="Full_Name" class="required">Full Name
+                        <span class="required_star"> * </span>
+                    </label>
+                </td>
+                <td valign="top">
+                    <input type="text" name="Full_Name" id="Full_Name" maxlength="80" style="width:230px">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <label for="Email_Address" class="required">Email Address
+                        <span class="required_star"> * </span>
+                    </label>
+                </td>
+                <td valign="top">
+                    <input type="text" name="Email_Address" id="Email_Address" maxlength="100" style="width:230px">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <label for="Telephone_Number" class="not-required">Telephone Number</label>
+                </td>
+                <td valign="top">
+                    <input type="text" name="Telephone_Number" id="Telephone_Number" maxlength="100" style="width:230px">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <label for="Your_Message" class="required">Your Message
+                        <span class="required_star"> * </span>
+                    </label>
+                </td>
+                <td valign="top">
+                    <textarea style="width:230px;height:160px" name="Your_Message" id="Your_Message" maxlength="2000"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center">
+                    <div class="antispammessage">
+                        To help prevent automated spam, please answer this question
+                        <br />
+                        <br />
+                        <div class="antispamquestion">
+                            <span class="required_star"> * </span>
+                            Using only numbers, what is 10 plus 15? &nbsp;
+                            <input type="text" name="AntiSpam" id="AntiSpam" maxlength="100" style="width:30px">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center">
+                    <br />
+                    <br />
+                    <input type="submit" value=" Submit Form " style="width:200px;height:40px">
+                    <br />
+                    <br />
+                    <!-- 
+	  If you want to remove this author link, 
+	  please purchase an unbranded version from: http://www.freecontactform.com/unbranded_form.php 
+	  Or upgrade to the professional version at: http://www.freecontactform.com/professional.php
+	  -->
+                    <div>Form provided by:
+                        <a href="http://www.freecontactform.com">FreeContactForm.com</a>
+                    </div>
+                    <br />
+                    <br />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="build/style.css">
+    <link rel="stylesheet" href="swiper/dist/css/swiper.min.css">
+    <link rel="stylesheet" href="jquery-ui-1.12.1.custom/jquery-ui.theme.css">
+    <link rel="shortcut icon" href="img/misc/5.png">
+    <title>Kuroda</title>
+</head>
+
+<body class="body">
+
+    <header class="header header--mod scroll">
+        <div class="header__content">
+            <img src="img/logo/logo.png" alt="Kuroda" class="logo">
+            <ul class="top-menu">
+                <li class="menu__item">
+                    <a href="#" target="_blank" class="menu--link">OPTION</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" target="_blank" class="menu--link">OPTION</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" target="_blank" class="menu--link">OPTION</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" target="_blank" class="menu--link">OPTION</a>
+                </li>
+                <li class="menu__item">
+                    <a href="#" target="_blank" class="menu--link">OPTION</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos architecto quasi maxime accusantium deleniti soluta, aliquid
+            quo provident perferendis consequatur corporis voluptatum consectetur a quis doloribus culpa adipisci. Ea, magni!
+            <br>
+            <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos architecto quasi maxime accusantium deleniti soluta,
+            aliquid quo provident perferendis consequatur corporis voluptatum consectetur a quis doloribus culpa adipisci.
+            Ea, magni!
+            <br>
+            <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos architecto quasi maxime accusantium deleniti soluta,
+            aliquid quo provident perferendis consequatur corporis voluptatum consectetur a quis doloribus culpa adipisci.
+            Ea, magni!
+            <br>
+            <br>
+        </div>
+        <div class="content">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos architecto quasi maxime accusantium deleniti soluta, aliquid
+            quo provident perferendis consequatur corporis voluptatum consectetur a quis doloribus culpa adipisci. Ea, magni!
+            <br>
+            <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos architecto quasi maxime accusantium deleniti soluta,
+            aliquid quo provident perferendis consequatur corporis voluptatum consectetur a quis doloribus culpa adipisci.
+            Ea, magni!
+            <br>
+            <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos architecto quasi maxime accusantium deleniti soluta,
+            aliquid quo provident perferendis consequatur corporis voluptatum consectetur a quis doloribus culpa adipisci.
+            Ea, magni!
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <ul class="mobile-menu mobile-menu--mod scroll">
+        <li class="menu__item">
+            <a href="#" target="_blank" class="menu--link">ABC</a>
+        </li>
+        <li class="menu__item">
+            <a href="#" target="_blank" class="menu--link">ABC</a>
+        </li>
+        <li class="menu__item">
+            <a href="#" target="_blank" class="menu--link">ABC</a>
+        </li>
+        <li class="menu__item">
+            <a href="#" target="_blank" class="menu--link">ABC</a>
+        </li>
+        <li class="menu__item">
+            <a href="#" target="_blank" class="menu--link">ABC</a>
+        </li>
+    </ul>
+
+    <footer class="footer footer--mod">
+        <div class="footer__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptate obcaecati rerum distinctio?
+        </div>
+    </footer>
+
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+    <script src="jquery.scrolling.js"></script>
+    <script src="swiper/dist/js/swiper.min.js"></script>
+    <script>
+        $(".call-to-action").click(function () {
+            $(".marketplace__menu").slideToggle(10).css("display", "flex");
+        });
+
+        var categories = new Swiper('.categories', {
+            spaceBetween: 5,
+            pagination: {
+                el: '.swiper-pagination',
+                dynamicBullets: true,
+            },
+        });
+        var products = new Swiper('.products', {
+            slidesPerView: 3.4,
+            spaceBetween: 10,
+            freeMode: true,
+        });
+    </script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+</html> -->
