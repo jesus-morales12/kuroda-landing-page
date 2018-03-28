@@ -140,6 +140,7 @@ input:focus {
 
 .find-store {
   width: 100%;
+  padding-top: 60px;
   margin: 0 auto;
   background-color: rgba($color: #FFFFFF, $alpha: 0.7);
   @include responsive(l) {
