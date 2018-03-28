@@ -452,13 +452,12 @@ input:focus {
 
 .find-store {
   width: 100%;
-  padding-top: 60px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.7); }
-  @media only screen and (min-width: 992px) {
+  @media only screen and (min-width: 768px) {
     .find-store {
-      width: 990px; } }
-  @media only screen and (min-width: 1400px) {
+      padding-top: 60px; } }
+  @media only screen and (min-width: 992px) {
     .find-store {
       width: 990px; } }
 
