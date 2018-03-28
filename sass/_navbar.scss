@@ -1,0 +1,175 @@
+.tab-nav {
+    list-style-type: none;
+    overflow: hidden;
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+ }
+
+.logo {
+    height: 60%;
+    padding: 0 16px;
+    @include responsive(m) {
+        height: 45%;
+    }
+}
+
+.sm {
+    display: block;
+}
+
+.mobile-menu__option {
+    flex:1;
+}
+
+.mobile-menu__option--description {
+    width: 100%;
+    padding: {
+        top: 5px;
+        bottom: 5px;
+    }
+}
+
+/* ELEMENT */
+
+.navbar__item {
+    text-align: center;
+    padding: 10px 0;
+    @include responsive(m) {
+        height: 70px;
+    }
+    @include responsive(xl) {
+        height: 80px;
+    }
+}
+
+/* MODS */
+
+.--option-spacing {
+    height: 100%;
+    padding-top: 5px;
+    @include responsive (s) {
+        padding-top: 8px;
+    }
+}
+
+.navbar--theme {
+    background-color: $navbar-color;
+}
+
+.navbar--top {
+    top: 0;
+    height: 60px;
+    box-shadow: 0 2px 2px -2px gray;
+    @include responsive(m) {
+        justify-content: space-between;
+    }
+}
+
+.navbar--bottom {
+    bottom: 0;
+    box-shadow: 2px 0 2px gray;
+}
+
+.navbar__item--style {
+    text-decoration: none;
+    font: {
+        weight: bolder;
+        size: 12px;
+    }
+    color: $navbar-item-color;
+    @include responsive (s) {
+        font-size: 14px;
+    }
+    @include responsive (m) {
+        font-size: 15px;
+        padding: 0 8px;
+    }
+    @include responsive (l) {
+        font-size: 17px;
+        padding: 0 15px;
+    }
+    @include responsive (xl) {
+        font-size: 20px;
+        padding: 0 18px;
+    }
+}
+
+.navbar__item:hover {
+    @include responsive (m) {
+        transition: .2s ease;
+        background-color: $navbar-item-hover;
+        color: #ffffff;
+    }
+}
+
+/* RESPONSIVE */
+
+.m-l-navbar,
+.m-l-navbar-bottom,
+.xl-navbar {
+    display: none;
+}
+
+.menu {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    @include responsive (m) {
+        display: none;
+    }
+}
+
+.m-l-navbar {
+    @include responsive(m) {
+        display: block;
+        .navbar__item {
+            height: 70px;
+        } // }
+        // @include responsive(xl) {
+        //     display: none;
+        // }
+    }
+}
+
+.xl-navbar {
+    @include responsive(xl) {
+        display: block;
+        .navbar__item {
+            height: 80px;
+        }
+    }
+}
+
+.m-l-navbar-bottom {
+    @include responsive(m) {
+        display: block;
+        margin-top: 80px;
+        .navbar__item {
+            height: 50px;
+        }
+    }
+    @include responsive(l) {
+        display: block;
+    }
+    @include responsive(xl) {
+        display: none;
+    }
+}
+
+.navbar--top {
+    @include responsive(m) {
+        height: 70px;
+        .sm {
+            display: none;
+        }
+    }
+    @include responsive(xl) {
+        height: 80px;
+    }
+}

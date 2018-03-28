@@ -1,0 +1,194 @@
+%background-conf {
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    background: {
+        position: top;
+        repeat: no-repeat;
+        size: cover;
+    }
+    @include responsive(m) {
+        display: block;
+        padding-top: 0;
+        height: 45%;
+    }
+    @include responsive(l) {
+        height: 60%;
+    } // @include responsive(xl) {
+    //     width: 90%;
+    // }
+}
+
+/* SWIPER CLASSES */
+
+.wrapper--about {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+    height: 100%;
+}
+
+.swiper-slide .title {
+    color: white;
+    font-weight: 300;
+    @include responsive(s) {
+        font-size: 22px;
+    }
+    @include responsive(l) {
+        font-size: 41px;
+    }
+}
+
+.swiper-slide .text {
+    color: white;
+    width: 600px; // padding-top: 15px;
+    // padding-left: 30px;
+    line-height: 1.3;
+    @include responsive(s) {
+        font-size: 14px;
+    }
+    @include responsive(m) {
+        font-size: 16px;
+    }
+    @include responsive(l) {
+        font-size: 18px;
+    }
+    @include responsive(xl) {
+        font-size: 20px;
+    }
+}
+
+// MY CLASSES //
+/* BLOCK */
+
+// .productSwiper [class*="swiper-button-"] {
+//     display: none;
+//     @include responsive(s) {
+//         display: block;
+//     }
+// }
+
+.about__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: {
+        top: 20px;
+        left: 35px;
+        right: 35px;
+        bottom: 40px;
+    }
+    @include responsive(l) {}
+    @include responsive(xl) {
+        padding: 40px 70px;
+    }
+}
+
+.mobile-banner {
+    width: 100%;
+    text-align: center;
+    @include responsive(s) {
+        display: none;
+    }
+}
+
+// .productSwiper {
+//     background-color: white;
+// }
+.landscape-banner {
+    display: none;
+    @include responsive(s) {
+        display: block;
+    }
+    @include responsive(m) {
+        display: none;
+    }
+}
+
+.mobile-banner__img {
+    width: 100%;
+}
+
+.link--product {
+    @extend %links;
+    width: 100%;
+}
+
+.product-swiper__img {
+width: 100%;
+}
+
+.product-swiper__item {
+    display: flex;
+    flex-wrap: wrap;
+    background: white;
+}
+
+.product-swiper__label {
+    line-height: 1.3;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px 15px;
+    font: {
+        size: 13px;
+        weight: 999;
+    }
+    color: black;
+    @include responsive(s) {
+        font-size: 11px;
+    }
+    @include responsive(m) {
+        font-size: 13px;
+    }
+    @include responsive(l) {
+        font-size: 15px;
+    }
+    @include responsive(xl) {
+        font-size: 18px;
+        padding: 20px 30px;
+    }
+}
+
+.product-swiper__buy-button {
+    padding: 8px 0;
+    background-color: rgb(80, 200, 120);
+    color: white;
+    box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
+    @include responsive(l) {
+        font-size: 18px;
+    }
+}
+
+.banner-wrapper {
+
+    height: 60vh;
+}
+
+.banner-4 {
+    @extend %background-conf;
+    background-image: url('../img/banners/5.png');
+}
+
+.banner-5 {
+    @extend %background-conf;
+    background-image: url('../img/banners/5.jpg');
+}
+
+/* ELEMENT */
+
+/* MOD */

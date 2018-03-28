@@ -1,0 +1,65 @@
+
+/* BLOCK */
+
+.about {
+    margin: 0 auto;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.secondary-header {
+    width: 100%;
+}
+
+.secondary-header__content {
+    @extend .header__content;
+}
+
+.secondary-body {
+    @extend %body;
+}
+
+.about__content {
+    @include responsive(m) {
+        height: 160px;
+    }
+}
+
+/* ELEMENT */
+
+.about__text {
+    text-align: justify;
+    padding: {
+        top: 8px;
+        left: 15px;
+        right: 15px;
+    }
+}
+
+/* MODS */
+
+.about-parallax {
+    display: none;
+    @include responsive(s) {
+        display: block;
+        width: 100%;
+        height: 100vh;
+    }
+}
+
+
+.text--flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.--v-center {
+    align-self: center;
+}
+
+.about-parallax__img {
+    background-image: url("../img/banners/7.jpg");
+    filter: opacity(0.8);
+}
+
+/* RESPONSIVE */

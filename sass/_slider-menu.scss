@@ -1,0 +1,55 @@
+/* BLOCK */
+
+[canvas=container] {
+    margin-top: 0px;
+    height: calc( 100% - 0px);
+}
+
+[off-canvas] .side-menu {
+    list-style-type: none;
+    transition: all 200ms ease-in-out 0s;
+    display: block;
+    margin-top: 65px;
+    font: {
+        size: 18px;
+        weight: bolder;
+    }
+}
+
+/* ELEMENT */
+
+[off-canvas] .side-menu__link {
+    text-align: left;
+    padding: 10px 5px;
+    border-bottom: 1px solid rgba($color: white, $alpha: 0.1);
+}
+
+[off-canvas] .side-menu__link--style {
+    text-decoration: none;
+    padding-left: 15px;
+    color: #E3E3E3;
+}
+
+/* MODS */
+
+[off-canvas] {
+    background-color: #222222;
+    // visibility: hidden;
+}
+
+.side-menu--transition {
+    margin-right: -255px;
+    display: block;
+    transition-duration: 300ms;
+    transform: translate(255px, 0px);
+}
+
+
+
+/* RESPONSIVE */
+
+.side-menu__link:hover {
+    @include responsive(m) {
+        background-color: $navbar-item-hover;
+    }
+}
