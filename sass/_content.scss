@@ -1,0 +1,200 @@
+/* BLOCK */
+.tbd {
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.content {
+    margin: 0 auto;
+    text-align: center;
+    width: 96%;
+    background-color: white;
+}
+
+.title {
+    padding: 10px 4px;
+    margin-bottom: 10px;
+    font: {
+        size: 18px;
+        weight: bolder;
+    }
+    text-align: left;
+    border: {
+        bottom: 2px solid #b20000;
+    }
+}
+
+.--icon-spacing {
+    padding-left: 8px;
+}
+
+.subtitle {
+    @extend .title;
+    font-size: 12px;
+    border: none;
+    font-weight: normal;
+}
+
+.kuroda-fb-page {
+    width: 95%
+}
+
+.banner {
+    // margin-top: 60px;
+}
+
+.esr-parallax {
+    height: 350px; // padding-top: percentage($number: 9/16);
+    background: {
+        image: url('../img/banners/5.jpg');
+        attachment: scroll;
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+    }
+    @include responsive(s) {
+        background: {
+            attachment: fixed;
+        }
+    }
+}
+
+/* ELEMENT */
+
+// .banner__img {
+//     width: 100%;
+// }
+
+/* MODS */
+
+.tablet-content,
+.large-content,
+.xlarge-content {
+    display: none;
+}
+
+.kuroda-fb-page--style {
+    display: none;
+    padding: 10px 0px;
+    @include responsive(l) {
+        width: 25%;
+        display: block;
+        border-left: 1px solid rgba(0, 0, 0, 0.1);
+    }
+    @include responsive(xl) {
+        width: 30%;
+    }
+}
+
+%mobile-info--theme {
+    border: {
+        style: solid;
+        width: 1px;
+        color: rgba(0, 0, 0, 0.1);
+        radius: 5px;
+    }
+    box-shadow: 0 0 1px rgba(34,
+    25,
+    25,
+    0.4);
+}
+
+%mobile-info__item--theme {
+    width: 100%;
+    text-align: justify;
+    padding: {
+        left: 15px;
+        right: 15px;
+        bottom: 20px;
+    }
+}
+
+.--block-spacing {
+    margin: {
+        bottom: 25px;
+    }
+}
+
+%action {
+    width: 100%;
+    font: {
+        weight: bolder;
+        size: 18px;
+    }
+    padding: 10px 0;
+    color: $action-text;
+    text-align: center;
+}
+
+.call-to-action {
+    @extend %action;
+    background-color: $main-action;
+}
+
+.--even-width {
+    flex: 1;
+}
+
+/* RESPONSIVE */
+
+.--block-spacing {
+    margin-bottom: 15px;
+    @include responsive(s) {
+        margin: {
+            top: 40px;
+            bottom: 25px;
+        }
+    }
+}
+
+.--call-to-action {
+    @include responsive(l) {
+        font-size: 24px;
+    }
+    @include responsive(xl) {
+        font-size: 28px;
+    }
+}
+
+.content {
+    @include responsive(m) {
+        width: 80%;
+    }
+    @include responsive(l) {
+        width: 980px;
+    }
+    @include responsive(xl) {
+        padding-top: 90px;
+        width: 1200px;
+    }
+}
+
+.wrapper {
+    flex: 1 0 auto;
+    @include responsive(s) {
+        width: 90%;
+    }
+    @include responsive(m) {
+        display: none;
+    }
+}
+
+.tablet-content {
+    display: none;
+    @include responsive(m) {
+        height: 100%;
+        display: flex;
+        flex: 1 0 auto;
+        margin: 0 auto;
+        margin-top: 70px;
+    }
+    background-color: burlywood;
+}
+
+.not-visible {
+    display: none;
+}

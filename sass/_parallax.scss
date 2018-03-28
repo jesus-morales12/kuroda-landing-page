@@ -1,0 +1,64 @@
+%parallax--standard {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    @include responsive(s) {
+        height: 100vh;
+        background: {
+            attachment: scroll;
+            position: center;
+            repeat: no-repeat;
+            size: cover;
+        }
+    }
+    @include responsive(l) {
+        height: 600px;
+        background: {
+            attachment: fixed;
+        }
+    }
+    @include responsive(xl) {
+        height: 90vh;
+    }
+}
+
+.parallax-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 130%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+/* BLOCK */
+
+.parallax {
+    @extend %parallax--standard;
+    &-one {
+        //  @extend %parallax--standard;
+        background-image: url("../img/misc/1.jpg");
+    }
+    &-two {
+        // @extend %parallax--standard;
+        background-image: url("../img/misc/3.png");
+    }
+    &-three {
+        // @extend %parallax--standard;
+        background-image: url("../img/banners/6.jpg");
+    }
+    &-four {
+        // @extend %parallax--standard;
+        background-image: url("../img/banners/3.jpg");
+    }
+}
+
+/* MOD */
+
+.parallax--off {
+    display: none;
+    @include responsive(l) {
+        display: block;
+    }
+}

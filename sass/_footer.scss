@@ -1,0 +1,105 @@
+%footer-item-behaviour {
+    align-self: center;
+}
+
+.footer {
+    @include responsive(s) {
+        padding-bottom: 0;
+    }
+}
+
+.footer__text {
+    @extend %footer-item-behaviour;
+    flex-basis: 100%;
+    text-align: center;
+    font: {
+        size: 12px;
+    }
+    padding: 8px 10px;
+    @include responsive(s) {
+        flex-basis: 66.66%;
+    }
+    @include responsive(m) {
+        flex-basis: percentage($number: 1/3);
+    }
+}
+
+.social-media {
+    @extend %footer-item-behaviour;
+    flex-basis: 100%;
+    padding: 8px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @include responsive(s) {
+        flex-basis: 33.33%;
+    }
+}
+
+.social-media__item--style {
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+%links {
+    text-decoration: none;
+    color: blue;
+    @include responsive(s) {
+        font-size: 12px;
+    }
+}
+
+.footer__nav {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    @include responsive(m) {
+        flex-basis: percentage($number: 1/3);
+    }
+}
+
+.footer__link {
+    @extend %links;
+    font-size: 10px;
+    padding: {
+        top: 10px;
+        bottom: 15px;
+    }
+    @include responsive(m) {
+        padding: {
+            right: 10px;
+            left: 10px
+        }
+    }
+    @include responsive(l) {
+        font-size: 12px;
+    }
+}
+
+.footer--mod {
+    padding-top: 8px;
+    background-color: gainsboro;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.social-media__item {
+    padding: 0 15px;
+}
+
+.--fb {
+    color: $fb-color;
+}
+
+.--twitter {
+    color: $twitter-color;
+}
+
+.--youtube {
+    color: $youtube-color;
+}

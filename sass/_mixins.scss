@@ -1,0 +1,44 @@
+@import 'variables';
+
+/* RESPONSIVE GRID -- ROW */
+
+// @mixin row() {
+//     font-size: 0;
+// }
+
+// @function total-col-width($num-col) {
+//     @return $num-col * $min-col-width;
+// }
+
+/* BREAKPOINTS */
+
+@mixin responsive($device) {
+    @if $device==s {
+        @media only #{$s} {
+            @content;
+        }
+    }
+    @else if $device==m {
+        @media only #{$m} {
+            @content;
+        }
+    }
+    @else if $device==l {
+        @media only #{$l} {
+            @content;
+        }
+    }
+    @else if $device==xl {
+        @media only #{$xl} {
+            @content;
+        }
+    }
+}
+
+@mixin responsive-carousel($carousel-size) {
+    @if $carousel-size==m {
+        @media only #{$carousel-m} {
+            @content;
+        }
+    }
+}

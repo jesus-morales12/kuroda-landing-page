@@ -1,0 +1,24 @@
+.beetrack {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    background-color: white;
+    @include responsive(l) {
+        margin-bottom: 50px;
+    }
+}
+
+.beetrack__title {
+    @extend %title;
+    text-align: center;
+}
+
+.beetrack__subtitle {
+    font-size: 12px;
+    padding: 15px 20px;
+    font-style: italic;
+    color: #333333;
+    @include responsive(s) {
+        font-size: 14px;
+    }
+}

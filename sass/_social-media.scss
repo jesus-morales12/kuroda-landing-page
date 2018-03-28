@@ -1,0 +1,26 @@
+    /* BLOCK */
+
+
+
+    /* ELEMENT */
+
+    .contact__form-element {
+        padding: 0px 5px;
+        width: 100%;
+    }
+
+
+    /* MODS */
+
+   
+
+    /* REPSONSIVE */
+
+    .social-media {
+    }
+
+    .social-media__item {
+        @include responsive(m) {
+            padding: 10px 0;
+        }
+    }

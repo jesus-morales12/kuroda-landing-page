@@ -1,0 +1,118 @@
+%title {
+    padding: 2px 10px;
+    margin-left: 8px;
+    text-align: left;
+    align-self: center;
+}
+
+%body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+%bottom-spacing {
+    padding-bottom: 150px;
+}
+
+%content {
+    // background-color: #FEFFFE;
+    width: 95%;
+    margin: 24px auto;
+    @include responsive(m) {
+        width: 90%;
+    }
+}
+
+.--portrait-mobile-only {
+    @include responsive(s) {
+        display: none;
+    }
+}
+
+/* BLOCKS */
+
+.body {
+    @extend %body;
+}
+
+.header {
+    // display: none;
+    width: 100%;
+    z-index: 999;
+    @include responsive(m) {
+        position: fixed;
+        top: 0;
+    }
+}
+
+.wrapper {
+    flex: 1;
+}
+
+.content {
+    @extend %content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.carousel-content {
+    @extend %content;
+    height: 100%;
+    margin-bottom: 25px;
+    @include responsive(l) {
+        margin-bottom: 50px;
+    }
+}
+
+/* ELEMENTS */
+
+.header__content {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* MODIFIERS */
+
+.header--mod {
+    background-color: $header;
+    box-shadow: 0 2px 2px -2px $shadow;
+    border-bottom: 1px solid rgba($color: #000000, $alpha: 0.2);
+}
+
+.title {
+    @extend %title;
+    border: {
+        left: 2px solid #b20000;
+    }
+    font: {
+        size: 18px;
+        weight: bolder;
+    }
+    @include responsive(s) {
+        font-size: 20px;
+    }
+    @include responsive(m) {
+        font-size: 22px;
+    }
+    @include responsive(l) {
+        font-size: 26px;
+    }
+}
+
+.subtitle {
+    @extend %title;
+    font-size: 13px;
+    border: none;
+    font-weight: normal;
+    @include responsive(s) {
+        font-size: 15px;
+    }
+    @include responsive(m) {
+        font-size: 17px;
+    }
+}
