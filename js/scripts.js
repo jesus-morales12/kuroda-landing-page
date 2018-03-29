@@ -1,5 +1,3 @@
-
-
 jQuery(document).ready(function ($) {
     $("#my-menu").mmenu({
         "extensions": [
@@ -145,6 +143,49 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
     });
+
+    var bathroomSwiper = new Swiper('.bathroomSwiper', {
+        slidesPerView: 4.3,
+        slidesPerColumn: 2,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 3.5,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 2.3,
+                spaceBetween: 10,
+            },
+            640: {
+                slidesPerView: 2.3,
+                spaceBetween: 10,
+            },
+            576: {
+                slidesPerView: 1.5,
+                spaceBetween: 10,
+            },
+            425: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            375: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            }
+        }
+    });
+
+
+
     $(".button--buy").click(function () {
         $(".marketplace__menu").slideToggle(10).css("display", "flex");
     });
