@@ -562,6 +562,9 @@ input:focus {
       -ms-flex: 1;
           flex: 1; }
 
+#my-footer {
+  z-index: 1; }
+
 @media only screen and (min-width: 576px) {
   .--portrait-mobile-only {
     display: none; } }
@@ -648,16 +651,17 @@ TEST AREA
 */
 .test {
   padding: 0 20px;
+  margin: 0 auto;
   -webkit-box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
           box-shadow: 0 1px #FFFFFF inset, 0 1px 3px rgba(34, 25, 25, 0.4);
   background-color: white; }
   @media only screen and (min-width: 992px) {
     .test {
-      margin-left: 30px;
-      width: 75%; } }
+      width: 80%;
+      margin-left: 200px; } }
 
 .test-title {
-  margin: 20px 30px; }
+  margin: 20px 180px; }
 
 .test-align {
   -ms-flex-item-align: center;
@@ -672,25 +676,34 @@ TEST AREA
           flex: 1; }
 
 .marketplace--sidebar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 250px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 150px;
+  min-height: 100%;
   position: fixed;
   top: 0;
-  right: 0;
-  margin-top: 80px;
-  margin-right: 30px; }
+  left: 0;
+  margin-top: 60px; }
+  @media only screen and (min-width: 992px) {
+    .marketplace--sidebar {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
 
 .sidebar-title {
   background-color: #FF4500;
   color: #F1F1F1;
-  font-size: 20px;
-  padding: 12px 0; }
+  font-size: 14px;
+  padding: 12px 5px; }
+
+.--sidebar-store {
+  width: 80%; }
 
 /*****************
 TEST AREA
