@@ -522,7 +522,6 @@ input:focus {
   flex-direction: column; }
 
 #my-content {
-  padding-top: 60px;
   flex: 1; }
 
 #my-footer {

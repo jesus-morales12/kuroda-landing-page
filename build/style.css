@@ -557,7 +557,6 @@ input:focus {
           flex-direction: column; }
 
 #my-content {
-  padding-top: 60px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
